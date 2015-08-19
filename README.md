@@ -14,27 +14,27 @@ Source dataset https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUC
 *  Only vaiables containing mean() & std() are used.
 *  Requires the plyr & reshape2 packages.
 *  Assumes the dataset is unzipped in the current directory.
+*  
+
 ## Dependencies
 run_analysis.R file will help you to install the dependencies automatically. It depends on reshape2 and data.table.
 Constructed using the following:
+About the script and the tidy dataset
+-------------------------------------
+I created a script called run_analysis.R which will merge the test and training sets together.
+Prerequisites for this script:
 
-```R
-> version
-platform       x86_64-apple-darwin12.4.0
-arch           x86_64
-os             darwin12.4.0
-system         x86_64, darwin12.4.0
-status
-major          3
-minor          0.1
-year           2013
-month          05
-day            16
-svn rev        62743
-language       R
-version.string R version 3.0.1 (2013-05-16)
-nickname       Good Sport
-```
+1. the UCI HAR Dataset must be extracted and..
+2. the UCI HAR Dataset must be availble in a directory called "UCI HAR Dataset"
+
+After merging testing and training, labels are added and only columns that have to do with mean and standard deviation are kept.
+
+Lastly, the script will create a tidy data set containing the means of all the columns per test subject and per activity.
+This tidy dataset will be written to a tab-delimited file called tidy.txt, which can also be found in this repository.
+
+About the Code Book
+-------------------
+The CodeBook.md file explains the transformations performed and the resulting data and variables.
 
 ##  Running
 
